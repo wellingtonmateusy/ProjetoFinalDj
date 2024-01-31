@@ -1,0 +1,18 @@
+<div class="col-9 m-5">
+    <h3>Próximos campeonatos</h3>
+    <p>Proximos campeonatos de esports</p>
+    <div class=" mt-5">
+        <div class="col-12" id="campeonatos">
+            <a href="{% url "campeonatos:index" camp.id %}" class="d-flex">
+                <article class="card w-100 articleCamp">
+                    <article class="card-body">
+                        <div class="d-flex">
+                            <img src="" alt="" class="rounded">{{camps.img}}</>
+                            <p class="text-center m-2">{{camps.title}}</p>
+                        </div>
+                    </article>
+                </article>
+            </a>
+        </div>
+    </div>
+</div>

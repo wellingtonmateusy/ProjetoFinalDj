@@ -1,0 +1,43 @@
+<nav class="navbar bg-dark flex-column nav-pills">
+    <div class="navbar-brand">
+        <img src="{% static 'global/lib/midias/Logos/Dream Sketch.png' %}" alt="">
+    </div>
+    <ul class="nav navbar-nav d-block">
+        <li class="nav-item mt-3">
+            <a href="{% url "home:home" %}" class="nav-link">
+                <div class="ico_nome d-flex" id="icones">
+                    <span  class="espacoNav"></span>
+                    <i class="bi bi-house"></i> 
+                    <h6>Home</h6>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url "monte_seu_time:home" %}" class="nav-link">
+                <div class="ico_nome d-flex" id="icones">
+                    <span  class="espacoNav"></span>
+                    <i class="bi bi-dpad"></i>
+                    <h6>Monte seu Time</h6>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url "campeonato:home" %}" class="nav-link">
+                <div class="ico_nome d-flex" id="icones">
+                    <span  class="espacoNav"></span>
+                    <i class="bi bi-trophy"></i>
+                    <h6>Campeonato</h6>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url "partidas:home" %}">
+                <div class="ico_nome d-flex" id="icones">
+                    <span class="espacoNav"></span>
+                    <i class="bi bi-calendar-week"></i>
+                    <h6>Partidas</h6>
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
