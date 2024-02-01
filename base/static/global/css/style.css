@@ -28,8 +28,13 @@ section #buttonsheader .cadastro{
     border: none;
 }
 
+.navbar-nav{
+    height: 1350px;
+    width: 90%;
+}
+
 .navbar{
-    width: 250px;
+    width: 100%;
 }
 
 .navbar-brand img{
@@ -37,7 +42,8 @@ section #buttonsheader .cadastro{
 }
 
 .nav-item{
-    width: 200px;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-item:hover, .card-footer .card:hover{
@@ -48,6 +54,10 @@ section #buttonsheader .cadastro{
 
 .nav-item .espacoNav{
     margin-left: 20%;
+}
+
+.nav-link{
+    width: 100%;
 }
 
 .nav-link .bi{

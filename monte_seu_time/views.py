@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-
 def monte_seu_time(request):
     return render(
         request,

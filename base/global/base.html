@@ -12,9 +12,71 @@
         <link rel="stylesheet" href="{% static '/global/css/style.css' %}">
     </head>
     <body>
-        {% include "global/partials/header.html" %}
-        <div class="d-flex">
-            {% include "global/partials/navbar.html" %}
+        <header class="bg-dark">
+            <section>
+                <div class="container">
+                    <div class="d-flex">
+                        <div class="text-center col-11">
+                            <img src="{% static 'global/lib/League-of-Legends-Logo.png' %}" alt="Logo League of Legends" style="width: 120px;">
+                        </div>
+                        <div class="col-2 mt-3" id="buttonsheader">
+                            <a href="{% url "autenticacao:login" %}">
+                                <button class="btn btn-dark login">Login</button>
+                            </a>
+                            <a href="{% url "autenticacao:cadastro" %}">
+                                <button class="btn btn cadastro">Cadastro</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <div class="row">
+            <div class="col-2">
+                <nav class="navbar bg-dark flex-column nav-pills">
+                    <div class="navbar-brand">
+                        <img src="{% static 'global/lib/Dream Sketch.png' %}" alt="Logo Site">
+                    </div>
+                    <ul class="navbar-nav d-block">
+                        <li class="nav-item mt-3">
+                            <a href="{% url "home:home" %}" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span  class="espacoNav"></span>
+                                    <i class="bi bi-house"></i> 
+                                    <h6>Home</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url "monte_seu_time:home" %}" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span  class="espacoNav"></span>
+                                    <i class="bi bi-dpad"></i>
+                                    <h6>Monte seu Time</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url "campeonatos:home" %}" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span  class="espacoNav"></span>
+                                    <i class="bi bi-trophy"></i>
+                                    <h6>Campeonato</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url "partidas:home" %}" class="nav-link">
+                                <div class="ico_nome d-flex" id="icones">
+                                    <span class="espacoNav"></span>
+                                    <i class="bi bi-calendar-week"></i>
+                                    <h6>Partidas</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             {% block content %}{% endblock content %}
         </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,131 +1,23 @@
-{% load static %}
-<div class="col-10">
-    <div class="col-1"></div>
-    <article class="card col-9 bg-dark" id="ar_jogadores">
-        <article class="card-header d-flex">
-            <div class="imgcamp">
-                <img src="./lib/midias/Campeonatos/CBLOL.webp" alt="">
-            </div>
-            <p>CBLOL 2024 1° Split</p>
-            <article class="card bg-dark carteira">
-                <div class="d-flex">
-                    <span><i class="bi bi-wallet" id="icones"></i></span>
+{% extends "global/base.html" %}
+
+{% block texto %}{{text}}{% endblock texto %}
+
+{% block articles %}
+    <article class="card-header d-flex">
+        <div class="imgcamp">
+            <img src="{{article.img}}" alt="">
+        </div>
+        <p>{{article.title}}</p>
+        <article class="card bg-dark carteira">
+            <div class="d-flex">
+                <span><i class="bi bi-wallet" id="icones"></i></span>
+                <span class="col-1"></span>
+                <label class="bg-dark d-flex">
+                    <h6>R$</h6>
                     <span class="col-1"></span>
-                    <label class="bg-dark d-flex">
-                        <h6>R$</h6>
-                        <span class="col-1"></span>
-                        <h6 id="precoFinal">1.000.000</h6>
-                    </label>
-                </div>
-            </article>
-        </article>
-        <article class="card-body d-flex">
-            <article class="card col-2 bg-dark" id="modalTOP">
-                <article class="card-body">
-                    <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="" class="col-3 mb-2 rounded pais">
-                    <img src="./lib/midias/Logos/Iconpag.png" alt="" class="col-3 mb-2 time">
-                    <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
-                        <img src="./lib/midias/Logos/Moeda.png" alt="" class="col-3 mb-1">
-                    </span>
-                    <img src="./lib/midias/Jogadores/images.png" alt="" class="col-12" id="imgJogador">
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="./lib/midias/Funções/Top.png" alt="" class="col-5 mt-2" id="funcao">
-                        <h6 class="Fnome">TOP</h6>
-                    </div>
-                    <button class="btn btn-success col-12 bg-dark"  data-toggle="modal" data-target="#comprarTOP"><i class="bi bi-plus-lg"></i></button>
-                </article>
-            </article>
-            <span id="espaco"></span>
-            <article class="card col-2 bg-dark" id="modalJungler">
-                <article class="card-body">
-                    <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="" class="col-3 mb-2 rounded pais">
-                    <img src="./lib/midias/Logos/Iconpag.png" alt="" class="col-3 mb-2 time">
-                    <span  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
-                        <img src="./lib/midias/Logos/Moeda.png" alt="" class="col-3 mb-1">
-                    </span>
-                    <img src="./lib/midias/Jogadores/images.png" alt="" class="col-12" id="imgJogador">
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="./lib/midias/Funções/Jungler.png" alt="" class="col-5 mt-2" id="funcao">
-                        <h6 class="Fnome">Jungler</h6>
-                    </div>
-                    <button class="btn btn-success col-12 bg-dark" data-toggle="modal" data-target="#comprarJungler"><i class="bi bi-plus-lg"></i></button>                              </article>
-            </article>
-            <span id="espaco"></span>
-            <article class="card col-2 bg-dark" id="modalMID">
-                <article class="card-body">
-                    <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="" class="col-3 mb-2 rounded pais">
-                    <img src="./lib/midias/Logos/Iconpag.png" alt="" class="col-3 mb-2 time">
-                    <span  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
-                        <img src="./lib/midias/Logos/Moeda.png" alt="" class="col-3 mb-1">
-                    </span>
-                    <img src="./lib/midias/Jogadores/images.png" alt="" class="col-12" id="imgJogador">
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="./lib/midias/Funções/Mid.png" alt="" class="col-5 mt-2" id="funcao">
-                        <h6 class="Fnome">MID</h6>
-                    </div>
-                    <button class="btn btn-success col-12 bg-dark" data-toggle="modal" data-target="#comprarMID"><i class="bi bi-plus-lg"></i></button>                               </article>
-            </article>
-            <span id="espaco"></span>
-            <article class="card col-2 bg-dark" id="modalADC">
-                <article class="card-body">
-                    <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="" class="col-3 mb-2 rounded pais">
-                    <img src="./lib/midias/Logos/Iconpag.png" alt="" class="col-3 mb-2 time">
-                    <span  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
-                        <img src="./lib/midias/Logos/Moeda.png" alt="" class="col-3 mb-1">
-                    </span>
-                    <img src="./lib/midias/Jogadores/images.png" alt="" class="col-12" id="imgJogador">
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="./lib/midias/Funções/BotADC.png" alt="" class="col-5 mt-2" id="funcao">
-                        <h6 class="Fnome">ADC</h6>
-                    </div>
-                    <button class="btn btn-success col-12 bg-dark" data-toggle="modal" data-target="#comprarADC"><i class="bi bi-plus-lg"></i></button>                               </article>
-            </article>
-            <span id="espaco"></span>
-            <article class="card col-2 bg-dark" id="modalSUP">
-                <article class="card-body">
-                    <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="" class="col-3 mb-2 rounded pais">
-                    <img src="./lib/midias/Logos/Iconpag.png" alt="" class="col-3 mb-2 time">
-                    <span  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
-                        <img src="./lib/midias/Logos/Moeda.png" alt="" class="col-3 mb-1">
-                    </span>
-                    <img src="./lib/midias/Jogadores/images.png" alt="" class="col-12" id="imgJogador">
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="./lib/midias/Funções/BotSuporte.png" alt="" class="col-5 mt-2" id="funcao">
-                        <h6 class="Fnome">SUP</h6>
-                    </div>
-                    <button class="btn btn-success col-12 bg-dark" data-toggle="modal" data-target="#comprarSUP"><i class="bi bi-plus-lg"></i></button>                               </article>
-            </article>
-            <span id="espaco"></span>
-            <article class="card col-2 bg-dark" id="modalCoach">
-                <article class="card-body">
-                    <img src="./lib/midias/Logos/League-of-Legends-Logo.png" alt="" class="col-3 mb-2 rounded pais">
-                    <img src="./lib/midias/Logos/Iconpag.png" alt="" class="col-3 mb-2 time">
-                    <span  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
-                        <img src="./lib/midias/Logos/Moeda.png" alt="" class="col-3 mb-1">
-                    </span>
-                    <img src="./lib/midias/Jogadores/images.png" alt="" class="col-12" id="imgJogador">
-                    <div class="d-flex justify-content-center mb-2">
-                        <img src="./lib/midias/Funções/Coach.png" alt="" class="col-5 mt-2" id="funcao">
-                        <h6 class="Fnome">Coach</h6>
-                    </div>
-                    <button class="btn btn-success col-12 bg-dark" data-toggle="modal" data-target="#comprarCoach"><i class="bi bi-plus-lg"></i></button>
-                </article>
-            </article>
-        </article>
-        <article class="card-footer">
-            <div class="row">
-                <article class="card" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Selecione 5 Jogadores">
-                    <i class="bi bi-person" id="icones"></i>
-                </article>
-                <article class="card" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Salário máximo de R$1.000.00">
-                    <i class="bi bi-wallet" id="icones"></i>
-                </article>
-                <article class="card" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Máximo de 3 jogadores por time ">
-                    <i class="bi bi-flag" id="icones"></i>
-                </article>
-                <button class="btn btn-danger" type="reset" id="limpar">Limpar</button>
-                <button class="btn btn-success" type="submit">Salvar</button>                                
+                    <h6 id="precoFinal">1.000.000</h6>
+                </label>
             </div>
         </article>
     </article>
-</div>
+{% endblock articles %}
