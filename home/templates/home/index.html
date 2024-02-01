@@ -1,10 +1,184 @@
-{% extends "global/base.html" %}
+{% extends "global/header.html" %}
 
 {% block title %}{{ title }}{% endblock title %}
 
 {% block texto %}{{ text }}{% endblock texto %}
 
 {% block content %}
-    {% include "home/carrousel.html" %}
-    {% include "home/campeonatos.html" %}
+    {% load static %}
+    <div class="col-10 d-flex  justify-content-center" style="margin-left: 100px;">
+        <div class="col-8">
+            <div class="carousel slide" id="carousel-ex" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img src="{% static '/lib/Banners/2024.png' %}" alt="" class="w-100">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img src="{% static '/lib/Banners/Exodia.png' %}" alt="" class="w-100">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img src="{% static '/lib/Banners/HB20.png' %}" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-ex" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <div class="col-12 justify-content-center" style="margin-left: 50px;">
+                <h3 class="text-center mb-3">Monte seu Time</h3>
+                <div class="row">
+                    <div class="col-4" id="imgMT">
+                        <a href="{% url "monte_seu_time:cblol" %}">
+                            <article class="card bg-dark">
+                                <div class="card-body">
+                                    <img src="{% static '/lib/Campeonatos/CBLOL.webp' %}" alt="" class="w-100 rounded">
+                                    <h5 class="text-center mt-2">CBLOL 2024 1° Split</h5>
+                                    <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores do Cblol</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-4" id="imgMT">
+                        <a href="{% url "monte_seu_time:lpl" %}">
+                            <article class="card bg-dark">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img src="{% static '/lib/Campeonatos/LPL.png' %}" alt="" class="w-100 rounded">
+                                        <div class="image-text">Em Breve</div>
+                                    </div>
+                                    <h5 class="text-center mt-2">LPL 2024 Split 1</h5>
+                                    <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LPL</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-4" id="imgMT">
+                        <a href="{% url "monte_seu_time:lck" %}">
+                            <article class="card bg-dark">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img src="{% static '/lib/Campeonatos/LCK.webp' %}" alt="" class="w-100 rounded">
+                                        <div class="image-text">Em Breve</div>
+                                    </div>
+                                    <h5 class="text-center mt-2">LCK 2024 1° Split</h5>
+                                    <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LCK</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-4 mt-4" id="imgMT">
+                        <a href="{% url "monte_seu_time:lcs" %}">
+                            <article class="card bg-dark">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img src="{% static '/lib/Campeonatos/LCS.jpg' %}" alt="" class="w-100 rounded">
+                                        <div class="image-text">Em Breve</div>
+                                    </div>
+                                    <h5 class="text-center mt-2">LCS 2024 1° Split</h5>
+                                    <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LCS</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-4 mt-4" id="imgMT">
+                        <a href="{% url "monte_seu_time:lec" %}">
+                            <article class="card bg-dark">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img src="{% static '/lib/Campeonatos/LEC.png' %}" alt="" class="w-100 rounded">
+                                        <div class="image-text">Em Breve</div>
+                                    </div>
+                                    <h5 class="text-center mt-2">LEC 2024 1° Split</h5>
+                                    <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LCS</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-4 mt-4" id="imgMT">
+                        <a href="{% url "monte_seu_time:lla" %}">
+                            <article class="card bg-dark">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img src="{% static '/lib/Campeonatos/LLA.jpg' %}" alt="" class="w-100 rounded">
+                                        <div class="image-text">Em Breve</div>
+                                    </div>
+                                    <h5 class="text-center mt-2">LLA 2024 1° Split</h5>
+                                    <p class="card-text text-center">Monte seu time dos Sonhos com Jogadores da LCS</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 mt-5">
+            <p>Campeonatos</p>
+            <div class="col-11" id="campeonatos">
+                <a href="#" class="d-flex">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="{% static '/lib/Campeonatos/CBLOL.webp' %}" alt="" class="w-25 rounded">
+                                <p class="text-center m-2">CBLOL 2024 1° Split</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="mt-2"></div>
+            <div class="col-11" id="campeonatos">
+                <a href="#" class="d-flex">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="{% static '/lib/Campeonatos/LPL.png' %}" alt="" class="w-25 rounded">
+                                <p class="text-center m-2">LPL 2024 Split 1</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="mt-2"></div>
+            <div class="col-11" id="campeonatos">
+                <a href="#">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="{% static '/lib/Campeonatos/LCK.webp' %}" alt="" class="w-25 rounded">
+                                <p class="text-center m-2">LCK 2024 1° Split</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="mt-2"></div>
+            <div class="col-11" id="campeonatos">
+                <a href="#" class="d-flex">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="{% static '/lib/Campeonatos/LCS.jpg' %}" alt="" class="w-25 rounded">
+                                <p class="text-center m-2">LCS 2024 1° Split</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="mt-2"></div>
+            <div class="col-11" id="campeonatos">
+                <a href="#" class="d-flex">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="{% static '/lib/Campeonatos/LEC.png' %}" alt="" class="w-25 rounded">
+                                <p class="text-center m-2">LEC 2024 1° Split</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

@@ -1,0 +1,60 @@
+{% load static %}
+<div class="col-12">
+    <div class="col-12 text-center">
+        <img src="{{article.mapa}}" alt="">
+    </div>
+    <div class="col-10">
+        <div class="col-1"></div>
+        <article class="card col-9 bg-dark" id="ar_jogadores">
+            <article class="card-header d-flex">
+                <div class="imgcamp">
+                    <img src="{{article.campeonato}}" alt="">
+                </div>
+                <p>{{article.titleCamp}}</p>
+                <article class="card bg-dark carteira">
+                    <div class="d-flex">
+                        <span><i class="bi bi-wallet" id="icones"></i></span>
+                        <span class="col-1"></span>
+                        <label class="bg-dark d-flex">
+                            <h6>R$</h6>
+                            <span class="col-1"></span>
+                            <h6 id="precoFinal">1.000.000</h6>
+                        </label>
+                    </div>
+                </article>
+            </article>
+            <article class="card-body d-flex">
+                <article class="card col-2 bg-dark" id="{{article.id}}">
+                    <article class="card-body">
+                        <img src="{% static 'global/lib/League-of-Legends-Logo.png' %}" alt="" class="col-3 mb-2 rounded pais">
+                        <img src="{% static 'global/lib/Iconpag.png' %}" alt="" class="col-3 mb-2 time">
+                        <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="">
+                            <img src="{{article.moeda}}" alt="" class="col-3 mb-1">
+                        </span>
+                        <img src="{{article.jogadorSem}}" alt="" class="col-12" id="imgJogador">
+                        <div class="d-flex justify-content-center mb-2">
+                            <img src="{{article.funcao}}" alt="" class="col-5 mt-2" id="funcao">
+                            <h6 class="Fnome">{{article.fnome}}</h6>
+                        </div>
+                        <button class="btn btn-success col-12 bg-dark"  data-toggle="modal" data-target="{{article.target}}"><i class="bi bi-plus-lg"></i></button>
+                    </article>
+                </article>
+            </article>
+            <article class="card-footer">
+                <div class="row">
+                    <article class="card" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Selecione 5 Jogadores">
+                        <i class="bi bi-person" id="icones"></i>
+                    </article>
+                    <article class="card" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Salário máximo de R$1.000.00">
+                        <i class="bi bi-wallet" id="icones"></i>
+                    </article>
+                    <article class="card" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Máximo de 3 jogadores por time ">
+                        <i class="bi bi-flag" id="icones"></i>
+                    </article>
+                    <button class="btn btn-danger" type="reset" id="limpar">Limpar</button>
+                    <button class="btn btn-success" type="submit">Salvar</button>                                
+                </div>
+            </article>
+        </article>
+    </div>
+</div>
