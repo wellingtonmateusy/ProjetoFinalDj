@@ -1,0 +1,364 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(27, 24, 24);
+}
+
+#buttonsheader{
+    display: flex;
+}
+
+section #buttonsheader .login{
+    background-color: #D3AD6C;
+    color: #212529; 
+    text-transform: uppercase;
+}
+
+section #buttonsheader .cadastro{
+    color: #D3AD6C;
+    text-decoration: none;
+    border: none;
+}
+
+.navbar{
+    width: 250px;
+}
+
+.navbar-brand img{
+    width: 100%;
+}
+
+.nav-item{
+    width: 200px;
+}
+
+.nav-item:hover, .card-footer .card:hover{
+    background-color: #2c2c2c;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.nav-item .espacoNav{
+    margin-left: 20%;
+}
+
+.nav-link .bi{
+    font-size: 20px;
+}
+
+.nav-link .ico_nome h6{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#carousel-ex{
+    margin: 50px;
+}
+
+#ar_jogadores{
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+#imgJogador{
+    border-radius: 100%;
+    height: 125px;
+}
+
+#espaco{
+    margin-left: 5px;
+}
+
+#icones, h3, h5, h6, p{
+    color: #fff;
+}
+
+.imgcamp {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.imgcamp img {
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.carteira{
+    width:  145px;
+    height: 1%;
+    padding: 10px;
+    margin-left: 65%;
+}
+
+.bi-plus-lg{
+    color: #198754;
+}
+
+.bi-dash-lg{
+    color: #dc3545;
+}
+
+.card-body{
+    justify-content: center;
+}
+
+.card-body h6{
+    margin-left: 5px;
+    text-align: center;
+}
+
+.card-body .Fnome{
+    margin-top: 20%;
+}
+
+.pais{
+    margin-right: 5px;
+}
+
+.card-footer .card{
+    background-color: #212529;
+}
+
+.card-footer div{
+    display: -moz-grid-line;
+    grid-column-gap: 8px;
+}
+
+.card-footer .card{
+    width: 5%;
+    height: 50px;
+}
+
+.card-footer #icones{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(252, 53, 53);
+}
+
+.card-footer .btn-danger{
+    margin-left: 40%;
+    text-transform: uppercase;
+}
+
+.card-footer .btn-success{
+    background-color: #D3AD6C;
+    color: #212529;
+    border: none;
+    text-transform: uppercase;
+}
+
+.card-footer .btn-success:active{
+    background-color: #D3AD6C;
+    color: #212529;
+}
+
+
+.card-footer button{
+    width: 20%;
+    height: 10%;
+    margin-top: 5px;
+}
+
+.modal-header{
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+#jogador{
+    width: 50%;
+}
+
+div #campeonatos .card{
+    background-color: #212529;
+}
+
+div #campeonatos:hover .card{
+    background-color: #2c2c2c;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-text{
+    display: none;
+}
+
+#imgMT article:hover .image-text{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#imgMT article:hover img{
+    opacity: 0.5;
+}
+
+#tabelaTOP, #tabelaJungler,
+#tabelaMID, #tabelaADC,
+#tabelaSUP, #tabelaCoach{
+    max-height: 450px;
+    overflow-y: scroll;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabelaTOP::-webkit-scrollbar-track, #tabelaJungler::-webkit-scrollbar-track,
+#tabelaMID::-webkit-scrollbar-track, #tabelaADC::-webkit-scrollbar-track,
+#tabelaSUP::-webkit-scrollbar-track, #tabelaCoach::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track{
+    padding: 2px 0;
+    background-color: #404040;
+    border-radius: 10px;
+}
+
+#tabelaTOP::-webkit-scrollbar, #tabelaJungler::-webkit-scrollbar,
+#tabelaMID::-webkit-scrollbar, #tabelaADC::-webkit-scrollbar,
+#tabelaSUP::-webkit-scrollbar, #tabelaCoach::-webkit-scrollbar,
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+#tabelaTOP::-webkit-scrollbar-thumb, #tabelaJungler::-webkit-scrollbar-thumb,
+#tabelaMID::-webkit-scrollbar-thumb, #tabelaADC::-webkit-scrollbar-thumb,
+#tabelaSUP::-webkit-scrollbar-thumb, #tabelaCoach::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #D3AD6C;
+}
+
+#campeonatos .articleCamp{
+    height: 100px;
+}
+
+#campeonatos .articleCamp img{
+    height: 100%;
+    width: 9%;
+}
+
+.bodyLogin, .bodyCadastro{
+    background-image: url(/lib/midias/backgroud.png);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.formLogin{
+    margin-top: 10%;
+}
+
+.formCadastro{
+    margin-top: 4%;
+}
+
+.formLogin .linha, .formCadastro .linha{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    display: inline-block;
+    margin-bottom: 8px;
+    opacity: 0.2;
+}
+
+form .fw-bold{
+    color: rgb(99, 99, 99);
+}
+
+form #email, #senha, #nome{
+    background-color: #212529;
+    color: #fff;
+    border-color: #D3AD6C;
+}
+
+.formLogin form .btn-dark, .formCadastro form .btn-dark{
+    background-color: #D3AD6C;
+    color: #212529;
+    text-transform: uppercase;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.formLogin form .btn-dark:active, .formCadastro form .btn-dark:active{
+    background-color: #D3AD6C;
+    color: #212529;
+}
+
+.formLogin form .cadastro, .formCadastro form .login{
+    color: #D3AD6C;
+    text-decoration: none;
+}
+
+form h6{
+    text-align: center;
+}
+
+@media screen and (max-width: 760px){
+    
+}
+
+@media screen and (max-width: 1450px){
+    .navbar-brand img{
+        width: 205px;
+    }
+
+    .navbar-nav{
+        height: 1080px;
+    }
+
+    .nav-item .espacoNav{
+        margin-left: 15%;
+    }
+
+    .nav-item .nav-link{
+        width: 195px;
+        margin-right: 14px;
+    }
+
+    .nav-item:hover{
+        width: 195px;
+    }
+
+    #imgJogador{
+        height: 85px;
+    }
+
+    .carteira{
+        margin-left: 50%;
+    }
+
+    .card-footer .card{
+        width: 8%;
+    }
+
+    .card-footer .btn-danger{
+        margin-left: 30%;
+    }
+}
+
+@media screen and (min-width: 1460px) {
+    section #buttonsheader .login{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1023px){
+    
+}

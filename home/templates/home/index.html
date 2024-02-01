@@ -1,0 +1,10 @@
+{% extends "global/base.html" %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block texto %}{{ text }}{% endblock texto %}
+
+{% block content %}
+    {% include "home/carrousel.html" %}
+    {% include "home/campeonatos.html" %}
+{% endblock content %}
