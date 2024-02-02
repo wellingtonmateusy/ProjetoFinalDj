@@ -1,0 +1,23 @@
+{% extends "global/partials/autenticacao.html" %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block id %}
+    formLogin
+{% endblock id %}
+
+{% block content %}
+    <form action="">
+        <div class="m-3">
+            <label for="email" class="form-label fw-bold">E-mail</label>
+            <input type="email" placeholder="Seu e-mail" id="email" class="form-control" required>
+        </div>
+        <div class="m-3">
+            <label for="senha" class="form-label fw-bold">Senha</label>
+            <input type="password" id="senha" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-dark mb-2">Login</button>
+        <span class="linha"></span>
+        <h6 class="mb-3 fw-bold">Não tem uma conta?<a href="{% url "autenticacao:cadastro" %}" class="cadastro m-1">Criar conta</a></h6>
+    </form>
+{% endblock content %}

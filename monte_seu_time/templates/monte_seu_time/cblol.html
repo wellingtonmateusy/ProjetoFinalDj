@@ -1,9 +1,11 @@
-{% extends "global/base.html" %}
+{% extends "global/partials/monte_seu_time_article.html" %}
 
 {% block title %}{{title}}{% endblock title %}
 
-{% block texto %}{{text}}{% endblock texto %}
+{% block imgCamp %}
+    {% load static %}
+    {% static './lib/Campeonatos/CBLOL.webp' %}
+{% endblock imgCamp %}
+{% block titleCamp %}<p>CBLOL 2024 1° Split<p>{% endblock titleCamp %}
 
-{% block content %}
-    {% include "global/partials/monte_seu_time_article.html" %}
-{% endblock content %}
+

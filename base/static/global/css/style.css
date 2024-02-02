@@ -70,7 +70,7 @@ section #buttonsheader .cadastro{
 }
 
 #carousel-ex{
-    margin: 50px;
+    margin: 35px;
 }
 
 #ar_jogadores{
@@ -266,7 +266,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 .bodyLogin, .bodyCadastro{
-    background-image: url(/lib/midias/backgroud.png);
+    background-image: url(../lib/backgroud.png);
     background-size: cover;
     overflow-x: hidden;
 }
@@ -331,19 +331,19 @@ form h6{
 
     .navbar-nav{
         height: 1080px;
+        width: 100%;
     }
 
     .nav-item .espacoNav{
-        margin-left: 15%;
+        margin-left: 10px;
     }
 
     .nav-item .nav-link{
-        width: 195px;
-        margin-right: 14px;
+        width: 200px;
     }
 
     .nav-item:hover{
-        width: 195px;
+        width: 190px;
     }
 
     #imgJogador{

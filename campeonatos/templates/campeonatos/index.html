@@ -2,10 +2,17 @@
 
 {% block title %}{{title}}{% endblock title %}
 
-{% block texto %}{{text}}{% endblock texto %}
+{% load static %}
+{% block css %}
+    {% static '/style.css' %}
+{% endblock css %}
 
-{% block camps %}
-    {% for camp in camps %}
-        {% include "global/partials/campeonato.html" %}
-    {% endfor %}
-{% endblock camps %}
+{% block content %}
+    <div class="col-lg-9 col-sm-8 m-5">
+        <h3 class="text-center mb-3">Próximos Campeonato</h3>
+        <p class="text-center">Próximos campeonatos de esports</p>
+        <div class="m-5">
+            {% include "global/partials/campeonato.html" %}
+        </div>
+    </div>
+{% endblock content %}

@@ -10,6 +10,7 @@
         <title>Dream Sketch {% block title %}{% endblock title %}</title>
         <link rel="stylesheet" href="{% static '/global/boostrap/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static '/global/css/style.css' %}">
+        <link rel="stylesheet" href="{% block css %}{% endblock css %}">
     </head>
     <body>
         <header class="bg-dark">
@@ -32,7 +33,7 @@
             </section>
         </header>
         <div class="row">
-            <div class="col-2">
+            <div class="col-lg-2">
                 <nav class="navbar bg-dark flex-column nav-pills">
                     <div class="navbar-brand">
                         <img src="{% static 'global/lib/Dream Sketch.png' %}" alt="Logo Site">

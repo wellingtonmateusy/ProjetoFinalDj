@@ -3,3 +3,13 @@
 {% block title %}{{title}}{% endblock title %}
 
 {% block texto %}{{text}}{% endblock texto %}
+
+{% block content %}
+    <div class="col-lg-9 justify-content-center m-5">
+        <h3 class="text-center">Monte seu Time</h3>
+        <p class="text-center">Crie equipes com jogadores e ganhe pontos com base no desempenho de seus jogadores</p>
+        <h3 class="text-center mb-3 mt-5">Ligas Oficiais</h3>
+        {% include "global/partials/ligas.html" %}
+    </div>
+
+{% endblock content %}

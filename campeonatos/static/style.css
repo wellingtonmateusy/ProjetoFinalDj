@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#campeonatos{
+    width: 100%;
+}
+
+#campeonatos .card-body{
+    width: 50%;
+}
