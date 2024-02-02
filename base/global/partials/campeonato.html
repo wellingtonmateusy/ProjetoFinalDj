@@ -1,7 +1,7 @@
 {% load static %}
 <div class="col-11" id="campeonatos">
-    <a href="#" class="d-flex">
-        <article class="card">
+    <a href="{% url "campeonatos:cblol" %}" class="d-flex">
+        <article class="card cblol">
             <div class="card-body">
                 <div class="d-flex">
                     <img src="{% static '/lib/Campeonatos/CBLOL.webp' %}" alt="" class="w-25 rounded">
@@ -13,12 +13,12 @@
 </div>
 <div class="mt-1"></div>
 <div class="col-11" id="campeonatos">
-    <a href="#" class="d-flex">
+    <a href="{% url "campeonatos:lpl" %}" class="d-flex">
         <article class="card">
             <div class="card-body">
                 <div class="d-flex">
                     <img src="{% static '/lib/Campeonatos/LPL.png' %}" alt="" class="w-25 rounded">
-                    <p class="text-center m-2">LPL 2024 Split 1</p>
+                    <p class="text-center m-2">LPL 2024 1° Split</p>
                 </div>
             </div>
         </article>
@@ -26,7 +26,7 @@
 </div>
 <div class="mt-1"></div>
 <div class="col-11" id="campeonatos">
-    <a href="#">
+    <a href="{% url "campeonatos:lck" %}" class="d-flex">
         <article class="card">
             <div class="card-body">
                 <div class="d-flex">
@@ -39,7 +39,7 @@
 </div>
 <div class="mt-1"></div>
 <div class="col-11" id="campeonatos">
-    <a href="#" class="d-flex">
+    <a href="{% url "campeonatos:lcs" %}" class="d-flex">
         <article class="card">
             <div class="card-body">
                 <div class="d-flex">
@@ -52,7 +52,7 @@
 </div>
 <div class="mt-1"></div>
 <div class="col-11" id="campeonatos">
-    <a href="#" class="d-flex">
+    <a href="{% url "campeonatos:lec" %}" class="d-flex">
         <article class="card">
             <div class="card-body">
                 <div class="d-flex">
@@ -65,7 +65,7 @@
 </div>
 <div class="mt-1"></div>
 <div class="col-11" id="campeonatos">
-    <a href="#" class="d-flex">
+    <a href="{% url "campeonatos:lla" %}" class="d-flex">
         <article class="card">
             <div class="card-body">
                 <div class="d-flex">

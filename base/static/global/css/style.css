@@ -30,7 +30,7 @@ section #buttonsheader .cadastro{
 
 .navbar-nav{
     height: 1350px;
-    width: 90%;
+    width: 100%;
 }
 
 .navbar{
@@ -325,9 +325,6 @@ form h6{
 }
 
 @media screen and (max-width: 1450px){
-    .navbar-brand img{
-        width: 205px;
-    }
 
     .navbar-nav{
         height: 1080px;
@@ -343,7 +340,7 @@ form h6{
     }
 
     .nav-item:hover{
-        width: 190px;
+        width: 193px;
     }
 
     #imgJogador{

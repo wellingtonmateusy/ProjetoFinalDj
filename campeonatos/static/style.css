@@ -8,6 +8,16 @@
     width: 100%;
 }
 
+#campeonatos .cblol{
+    width: 88.5%;
+}
+
 #campeonatos .card-body{
     width: 50%;
+}
+
+@media screen and (max-width: 1450px){
+    #campeonatos .cblol{
+        width: 100%;
+    }
 }

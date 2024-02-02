@@ -1,0 +1,29 @@
+{% extends "global/header.html" %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+    <div class="col-9 m-5" id="tabelaCamp">
+        <div class="col-5">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>20/02/2024</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game in game_data %}
+                        <tr>
+                            <td class="col-3"><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
+                            <td class="col-3">{{ game.team1_score }}</td>
+                            <td class="col-3">{{ game.team2_score }}</td>
+                            <td class="col-3"><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
