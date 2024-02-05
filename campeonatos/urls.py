@@ -1,5 +1,6 @@
 from django.urls import path
 from campeonatos import views
+from .test_views import tournament_matches
 
 app_name = 'campeonatos'
 
@@ -11,4 +12,5 @@ urlpatterns = [
     path('LCS2024_1Split/', views.lcs, name = 'lcs'),
     path('LEC2024_1Split/', views.lec, name = 'lec'),
     path('LLA2024_1Split/', views.lla, name = 'lla'),
+    path('TournamentMatches/', tournament_matches, name='tournament_matches'),
 ]

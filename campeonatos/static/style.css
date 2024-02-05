@@ -16,6 +16,10 @@
     width: 50%;
 }
 
+#espaco{
+    width: 20px;
+}
+
 @media screen and (max-width: 1450px){
     #campeonatos .cblol{
         width: 100%;

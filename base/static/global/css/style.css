@@ -17,6 +17,7 @@ body{
 }
 
 section #buttonsheader .login{
+    margin-right: 100px;
     background-color: #D3AD6C;
     color: #212529; 
     text-transform: uppercase;
@@ -320,8 +321,37 @@ form h6{
     text-align: center;
 }
 
-@media screen and (max-width: 760px){
-    
+@media screen and (max-width: 844px){
+
+    .header{
+        min-width: 50px;
+    }
+
+
+    section #buttonsheader .login{
+        margin-left: 15px;
+    }
+
+    .navbar-brand{
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-item .nav-link{
+        width: 10px;
+    }
+
+    .ico_nome h6{
+        display: none;
+    }
+
+    #carousel-ex{
+        width: 100%;
+        margin-left: 0%;
+    }
 }
 
 @media screen and (max-width: 1450px){

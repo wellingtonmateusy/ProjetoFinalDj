@@ -1,11 +1,14 @@
-{% extends "global/header.html" %}
+{% extends "global/base.html" %}
 
 {% block title %}{{ title }}{% endblock title %}
 
-{% block texto %}{{ text }}{% endblock texto %}
+{% load static %}
+
+{% block css %}
+    {% static '/style.css' %}
+{% endblock css %}
 
 {% block content %}
-    {% load static %}
     <div class="col-10 d-flex  justify-content-center">
         <div class="col-8">
             <div class="carousel slide" id="carousel-ex" data-bs-ride="carousel">

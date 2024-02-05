@@ -1,30 +1,126 @@
-{% extends "global/header.html" %}
+{% extends "global/base.html" %}
 
 {% block title %}{{title}}{% endblock title %}
 
 {% load static %}
 
+{% block css %}
+    {% static '/style.css' %}
+{% endblock css %}
+
 {% block content %}
-    <div class="col-1 m-5" id="tabelaCamp">
-        <table class="table table-hover table-dark">
-            <thead class="w-25">
-                <tr>
-                    <th>20/02/2024</th>
-                </tr>
-            </thead>
-            <tbody class="row">
-                {% for game in game_data %}
-                    <tr class="col-9">
-                        <td><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
-                        <td><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
-                        <td><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
-                        <td><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
-                        <td>{{ game.team1_score }}</td>
-                        <td>{{ game.team2_score }}</td>
-                        <td><img src={% static "lib/LogosOrgs/LOUD.png" %} alt="" style="width: 20px;"></td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+    {% load custom_filters %}
+        <div class="col-2 m-5">
+            <table class="table table-hover table-dark">
+                <thead class="w-100">
+                    <td class="text-center">
+                        <span>Semana 1</span>
+                        <button class="btn btn-dark" onclick="toggleTabela(1)">Mostrar</button>
+                    </td>
+                </thead>
+                <tbody class="row" id="tabelaCamp1" style="display: none;">
+                    {% for game in game_data1 %}
+                        <tr>
+                            <td class="col w-25 text-center">
+                                <div>
+                                    <span>
+                                        {% if game.date_title %}
+                                            {{ game.date_title }}
+                                        {% endif %}
+                                    </span>
+                                    {% load custom_filters %}
+                                    <span>
+                                        {{ game.team1_abbreviation }}
+                                        <img src="{% if game.team1_logo_path %}{% static game.team1_logo_path %}{% else %}{% static 'caminho/do/seu/logotipo_padrao.png' %}{% endif %}" alt="" style="width: 30px;">
+                                    </span>
+                                    <span id="espaco">{{ game.team1_score }}</span>
+                                    <span id="espaco">{{ game.team2_score }}</span>
+                                    <span>
+                                        {{ game.team2_abbreviation }}
+                                        <img src="{% if game.team2_logo_path %}{% static game.team2_logo_path %}{% else %}{% static 'caminho/do/seu/logotipo_padrao.png' %}{% endif %}" alt="" style="width: 30px;">
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2 m-5">
+            <table class="table table-hover table-dark">
+                <thead class="w-100">
+                    <td class="text-center">
+                        <span>Semana 2</span>
+                        <button class="btn btn-dark" onclick="toggleTabela(2)">Mostrar</button>
+                    </td>
+                </thead>
+                <tbody class="row" id="tabelaCamp2" style="display: none;">
+                    {% for game in game_data2 %}
+                        <tr>
+                            <td class="col w-25 text-center">
+                                <div>
+                                    <span>
+                                        {% if game.date_title %}
+                                            {{ game.date_title }}
+                                        {% endif %}
+                                    </span>
+                                    {% load custom_filters %}
+                                    <span>
+                                        {{ game.team1_abbreviation }}
+                                        <img src="{% if game.team1_logo_path %}{% static game.team1_logo_path %}{% else %}{% static 'caminho/do/seu/logotipo_padrao.png' %}{% endif %}" alt="" style="width: 30px;">
+                                    </span>
+                                    <span id="espaco">{{ game.team1_score }}</span>
+                                    <span id="espaco">{{ game.team2_score }}</span>
+                                    <span>
+                                        {{ game.team2_abbreviation }}
+                                        <img src="{% if game.team2_logo_path %}{% static game.team2_logo_path %}{% else %}{% static 'caminho/do/seu/logotipo_padrao.png' %}{% endif %}" alt="" style="width: 30px;">
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2 m-5">
+            <table class="table table-hover table-dark">
+                <thead class="w-100">
+                    <td class="text-center">
+                        <span>Semana 3</span>
+                        <button class="btn btn-dark" onclick="toggleTabela(3)">Mostrar</button>
+                    </td>
+                </thead>
+                <tbody class="row" id="tabelaCamp3" style="display: none;">
+                    {% for game in game_data3 %}
+                        <tr>
+                            <td class="col w-25 text-center">
+                                <div>
+                                    <span>
+                                        {% if game.date_title %}
+                                            {{ game.date_title }}
+                                        {% endif %}
+                                    </span>
+                                    {% load custom_filters %}
+                                    <span>
+                                        {{ game.team1_abbreviation }}
+                                        <img src="{% if game.team1_logo_path %}{% static game.team1_logo_path %}{% else %}{% static 'caminho/do/seu/logotipo_padrao.png' %}{% endif %}" alt="" style="width: 30px;">
+                                    </span>
+                                    <span id="espaco">{{ game.team1_score }}</span>
+                                    <span id="espaco">{{ game.team2_score }}</span>
+                                    <span>
+                                        {{ game.team2_abbreviation }}
+                                        <img src="{% if game.team2_logo_path %}{% static game.team2_logo_path %}{% else %}{% static 'caminho/do/seu/logotipo_padrao.png' %}{% endif %}" alt="" style="width: 30px;">
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <script>
+            function toggleTabela(numero) {
+                $("#tabelaCamp" + numero).toggle();
+            }
+        </script>
 {% endblock content %}
