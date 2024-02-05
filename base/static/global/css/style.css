@@ -17,13 +17,13 @@ body{
 }
 
 section #buttonsheader .login{
-    margin-right: 100px;
     background-color: #D3AD6C;
     color: #212529; 
     text-transform: uppercase;
 }
 
 section #buttonsheader .cadastro{
+    margin-left: 10px;
     color: #D3AD6C;
     text-decoration: none;
     border: none;
@@ -85,11 +85,15 @@ section #buttonsheader .cadastro{
 }
 
 #espaco{
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 #icones, h3, h5, h6, p{
     color: #fff;
+}
+
+.MtLcs, .MtLec, .MtLla{
+    margin-top: 10px;
 }
 
 .imgcamp {
@@ -135,50 +139,6 @@ section #buttonsheader .cadastro{
     margin-right: 5px;
 }
 
-.card-footer .card{
-    background-color: #212529;
-}
-
-.card-footer div{
-    display: -moz-grid-line;
-    grid-column-gap: 8px;
-}
-
-.card-footer .card{
-    width: 5%;
-    height: 50px;
-}
-
-.card-footer #icones{
-    font-size: 30px;
-    text-align: center;
-    color: rgb(252, 53, 53);
-}
-
-.card-footer .btn-danger{
-    margin-left: 40%;
-    text-transform: uppercase;
-}
-
-.card-footer .btn-success{
-    background-color: #D3AD6C;
-    color: #212529;
-    border: none;
-    text-transform: uppercase;
-}
-
-.card-footer .btn-success:active{
-    background-color: #D3AD6C;
-    color: #212529;
-}
-
-
-.card-footer button{
-    width: 20%;
-    height: 10%;
-    margin-top: 5px;
-}
-
 .modal-header{
     color: #fff;
 }
@@ -189,6 +149,10 @@ a{
 
 #jogador{
     width: 50%;
+}
+
+#articlesMobile{
+    display: flex;
 }
 
 div #campeonatos .card{
@@ -206,6 +170,7 @@ div #campeonatos:hover .card{
 .image-text{
     display: none;
 }
+
 
 #imgMT article:hover .image-text{
     display: block;
@@ -327,31 +292,66 @@ form h6{
         min-width: 50px;
     }
 
-
-    section #buttonsheader .login{
-        margin-left: 15px;
-    }
-
     .navbar-brand{
         display: none;
     }
 
     .navbar {
         width: 100%;
+        height: 100%;
     }
 
-    .nav-item .nav-link{
-        width: 10px;
+    .nav-item{
+        width: 25%;
+        text-align: center;
     }
-
-    .ico_nome h6{
+    
+    
+    .nav-item .espacoNav{
+        margin-left: 20%;
+    }
+    
+    .nav-link{
+        width: 20px;
+    }
+    
+    .nav-link .bi{
+        font-size: 20px;
+    }
+    
+    .nav-link .ico_nome h6{
         display: none;
     }
 
     #carousel-ex{
         width: 100%;
-        margin-left: 0%;
+        margin-left: 0px;
     }
+
+    #imgMT{
+        margin-top: 10px;
+    }
+
+    #imgMapa{
+        width: 60%;
+    }
+
+    #espaco{
+        margin-left: 2px;
+    }
+
+    #imgJogador{
+        width: 65%;
+    }
+
+    #imgcamp{
+        width: 10px;
+    }
+
+    #articlesMobile{
+        display: block;
+    }
+
 }
 
 @media screen and (max-width: 1450px){

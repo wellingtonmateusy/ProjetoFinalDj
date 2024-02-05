@@ -5,12 +5,12 @@
 {% load static %}
 
 {% block css %}
-    {% static '/style.css' %}
+    {% static '/styleHome.css' %}
 {% endblock css %}
 
 {% block content %}
-    <div class="col-10 d-flex  justify-content-center">
-        <div class="col-8">
+    <div class="col col-lg-10 col-sm-12 d-flex  justify-content-center">
+        <div class="col col-lg-8 col-sm-8">
             <div class="carousel slide" id="carousel-ex" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div data-bs-interval="3000" class="carousel-item active">
@@ -34,7 +34,7 @@
                 {% include "global/partials/ligas.html" %}
             </div>
         </div>
-        <div class="col-4 mt-4">
+        <div class="col-4 mt-4" id="campeonatos">
             <p>Campeonatos</p>
             {% include "global/partials/campeonato.html" %}
         </div>

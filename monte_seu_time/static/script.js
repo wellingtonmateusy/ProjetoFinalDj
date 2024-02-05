@@ -238,8 +238,4 @@ $(document).ready(function(){
         }
     }
 
-    document.querySelector("#limpar").addEventListener('click', function () {
-        location.reload();
-    });
-
 })
