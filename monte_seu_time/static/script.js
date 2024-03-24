@@ -168,6 +168,7 @@ $(document).ready(function(){
                 const modal = $(modalId);
                 var novoPreco = 0
                 var precoJogador = 0
+                var valorFormatado = 0
                 var precoJogador = parseInt(jogador.preco)
                 novoPreco = parseInt($('#precoFinal').text().replace(/\./g, '')) + (precoJogador);
                 valorFormatado = parseFloat(novoPreco).toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0});
@@ -188,6 +189,9 @@ $(document).ready(function(){
                     .popover('dispose')
                     .popover();
                 adicionarEventoSubmit(posicao);
+                print(novoPreco)
+                print(precoJogador)
+                print(valorFormatado)
             });
         }
     }
@@ -202,6 +206,7 @@ $(document).ready(function(){
                 const modal = $(modalId);
                 var novoPreco = 0
                 var precoJogador = 0
+                var valorFormatado = 0
                 var precoJogador = parseInt(jogador.preco)
                 novoPreco = parseInt($('#precoFinal').text().replace(/\./g, '')) - (precoJogador);
                 valorFormatado = parseFloat(novoPreco).toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0});
@@ -225,6 +230,9 @@ $(document).ready(function(){
                 .popover('dispose')
                 .popover() 
                 resetarModal(jogador)
+                print(novoPreco)
+                print(precoJogador)
+                print(valorFormatado)
             });
         }
     }
